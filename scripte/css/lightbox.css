@@ -1,0 +1,43 @@
+#lightbox{
+height: 100%;
+left: 0;
+top: 0;
+width: 100%;
+z-index: 1001;
+position: fixed;
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+#lightbox-room{
+background: rgba(0, 0, 0, 0.88);
+height: 100%;
+left: 0;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+}
+#lightbox-content{
+display: flex;
+height: 100%,
+}
+#lightbox-close{
+color: rgb(255, 255, 255);
+font-size: 24px;
+}
+#curr_image{
+-moz-box-shadow: #000 0 0 6px 0;
+-webkit-box-shadow: rgb(0, 0, 0) 0 0 6px 0;
+box-shadow: rgb(0, 0, 0) 0 0 6px 0;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+margin: 0 auto;
+display: block;
+width: auto;
+height: auto;
+}

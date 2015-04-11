@@ -1,0 +1,117 @@
+#nav{
+background-color: rgb(255,255,255);
+background-color: rgba(255,255,255,0.8);
+height: 64px;
+border-bottom: 1px solid rgba(33, 33, 33, 0.33);
+position: fixed;
+width: 100%;
+z-index: 2;
+}
+.leaflet-top {
+top: 80px !important;
+}
+#nav_flexbox{
+display: flex;
+height: 65px;
+}
+#logo {
+width: 220px;
+height: 21px;
+font-size: 21px;
+padding: 23px 0px;
+margin-left: -2px;
+background-color: rgb(67, 200, 60);
+color: rgb(255, 255, 255) !important;
+overflow: hidden;
+font-weight: bold;
+text-align: center;
+text-shadow: rgb(49, 149, 43) 1px 1px,
+rgb(49, 149, 43) 2px 2px,
+rgb(49, 149, 43) 3px 3px,
+rgb(49, 149, 43) 4px 4px,
+rgb(49, 149, 43) 5px 5px,
+rgb(49, 149, 43) 6px 6px,
+rgb(49, 149, 43) 7px 7px,
+rgb(49, 149, 43) 8px 8px,
+rgb(49, 149, 43) 9px 9px,
+rgb(49, 149, 43) 10px 10px,
+rgb(49, 149, 43) 11px 11px,
+rgb(49, 149, 43) 12px 12px,
+rgb(49, 149, 43) 13px 13px,
+rgb(49, 149, 43) 14px 14px,
+rgb(49, 149, 43) 15px 15px,
+rgb(49, 149, 43) 16px 16px,
+rgb(49, 149, 43) 17px 17px,
+rgb(49, 150, 43) 18px 18px,
+rgb(49, 151, 43) 19px 19px,
+rgb(49, 151, 43) 20px 20px,
+rgb(50, 152, 44) 21px 21px,
+rgb(50, 153, 44) 22px 22px,
+rgb(50, 153, 44) 23px 23px,
+rgb(50, 154, 44) 24px 24px,
+rgb(50, 155, 44) 25px 25px,
+rgb(51, 155, 45) 26px 26px,
+rgb(51, 156, 45) 27px 27px,
+rgb(51, 157, 45) 28px 28px,
+rgb(51, 157, 45) 29px 29px,
+rgb(51, 158, 45) 30px 30px,
+rgb(52, 159, 46) 31px 31px,
+rgb(52, 159, 46) 32px 32px,
+rgb(52, 160, 46) 33px 33px,
+rgb(52, 161, 46) 34px 34px,
+rgb(52, 161, 46) 35px 35px,
+rgb(53, 162, 47) 36px 36px,
+rgb(53, 163, 47) 37px 37px,
+rgb(53, 163, 47) 38px 38px,
+rgb(53, 164, 47) 39px 39px,
+rgb(54, 165, 48) 40px 40px;
+webkit-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-bottomright: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+-webkit-box-shadow: 0px -2px 4px 2px rgba(50, 50, 50, 0.25);
+-moz-box-shadow: 0px -2px 4px 2px rgba(50, 50, 50, 0.25);
+box-shadow: 0px -2px 4px 2px rgba(50, 50, 50, 0.25);
+-webkit-transition: all 0.4s;
+-moz-transition: all 0.4s;
+transition: all 0.4s;
+}
+
+#mask_bg{
+height: 410px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#mask{
+z-index: 5;
+position: relative;
+width: 500px;
+margin-top: 100px;
+margin-bottom: 50px;
+border-radius: 10px;
+height: 250px;
+}
+#search{
+display: flex;
+}
+#search > input#index_form_input{
+width: 375px;
+border-radius: 4px 0 0 4px;
+}
+#search > input#index_form_submit{
+width: 125px;
+border-radius: 0 4px 4px 0;
+}
+#promobox {
+text-align: center;
+}
+
+
+#informationbox{
+background-color: white;
+margin-top: -10px;
+padding-top: 14px;
+}

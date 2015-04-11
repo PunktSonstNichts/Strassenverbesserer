@@ -1,0 +1,130 @@
+@media screen and (min-width: 600px){
+	#dialog{
+	width: 600px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding: 10px;
+	}
+	.label-helper{
+	margin-left: 180px;
+	margin-top: 10px;
+	}
+}
+@media screen and (max-width: 599px){
+	#dialog{
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding: 5px;
+	}
+	label{
+	display: none;
+	}
+	.right-info{
+	width: 15%;
+	margin-left: 35px;
+	}
+}
+@media screen and (max-width: 239px){
+	#dialog{
+	width: 200px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding: 5px;
+	}
+}
+
+
+
+#dialog-helper{
+position: fixed;
+left: 50%;
+z-index: 1050;
+}
+#dialog{
+z-index: 1050;
+position: relative;
+left: -50%;
+background-color: white;
+-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+border-radius: 2px;
+border: 1px solid rgba(0,0,0,0.2);
+}
+#dialog-heading{
+margin: 5px; 
+padding: 5px;
+}
+#dialog-heading > #dialog-settings{
+float:right;
+}
+#dialog-heading > #dialog-settings > .close{
+padding: 0;
+cursor: pointer;
+background: rgba(0, 0, 0, 0);
+border: 0;
+-webkit-appearance: none;
+float: right;
+font-size: 21px;
+font-weight: bold;
+line-height: 1;
+color: rgb(0, 0, 0);
+text-shadow: 0 1px 0 rgb(255, 255, 255);
+opacity: .2;
+transition: opacity 0.3s;
+}
+#dialog-heading > #dialog-settings > .close:hover, .close:focus{
+color: rgb(0, 0, 0);
+text-decoration: none;
+cursor: pointer;
+opacity: .5;
+}
+#dialog-content{
+border-top: 1px solid rgba(230, 230, 230, 0.8);
+min-height: 80px;
+padding: 10px;
+}
+#dialog-content > .dialog-divider{
+width: 100%;
+height: 1px;
+background-color: rgba(230, 230, 230, 0.8);
+margin-top: 5px;
+}
+
+#inactiv-overlay{
+position: fixed;
+margin: 0;
+width: 120%;
+height: 120%;
+z-index: 900;
+margin: 0;
+top: -20px;
+left: -20px;
+background-color: rgba(53, 53, 53, 0.2);
+}
+#dialog-handler{
+clear:both;
+}
+
+#dialog.success{
+width: 200px;
+background-image: none !important;
+background: rgb(67, 200, 60) !important;
+background-color: rgb(92, 184, 92);
+border-color: rgb(76, 174, 76);
+color: white;
+font-weight: bold;
+letter-spacing:1px;
+text-shadow: 0px 1px rgb(66, 66, 66);
+font-size: 16px
+}
+#dialog.error{
+width: 200px;
+color: rgb(169, 68, 66);
+background-color: rgb(242, 222, 222);
+border-color: rgb(235, 204, 209);
+letter-spacing:1px;
+}
+#dialog.error > #dialog-content{
+min-height: 40px !important;
+}
