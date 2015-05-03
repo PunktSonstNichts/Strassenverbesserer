@@ -43,15 +43,29 @@ if ( is_session_started() === FALSE ) session_start(); // If main.php is called 
 	<div id="info_wrapper">
 		<div class="wrapper" style="height: 100%;">
 			<div id="info">
-				<h3><?php echo _t("points that needs improvements"); ?></h3>
-				<div id="points_filter">
-				
+				<div id="info_bg">
+					<h3><?php echo _t("points that needs improvements"); ?></h3>
+					<div id="points_filter">
+					
+					</div>
+					<div id="result_wrapper">
+						<div id="points_result">
+						
+						</div>
+					</div>
+					<div id="add_point">
+						<button class="btn_success flat"><?php echo _t("add a point to map"); ?></button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div id="map">
-
+		<div class="wrapper" style="height: 100%">
+			<div id="geolocation_error">
+				<span><?php echo _t("You have to either accept or deny geolocation in order to view map here "); ?></span>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

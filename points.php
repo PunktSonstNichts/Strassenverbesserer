@@ -17,14 +17,16 @@ if(!$ne_lat || !$ne_lon || !$sw_lat || !$sw_lon){
 	$response["status"] = "error";
 	$response["msg"] = _t("data_transmitting_error");
 }else{
-	$point_sql = "SELECT point.id, point.title, point.description, 
+	$point_sql = "SELECT point.id, point.title, point.description, avatar.img_id as avatar, category.hex_color, category.hex_color_hover, 
 				  x( location ) AS lat, y( location ) AS lon
 				  FROM `point` 
+				  LEFT JOIN `images` avatar ON `avatar`.`element_id` = point.id AND `avatar`.`element_type` = 'point' AND `avatar`.`used_as` = 'avatar' AND `avatar`.`currentQ0` = 1
+				  LEFT JOIN `category` ON `category`.`id` = `point`.`matching_category`
 				  WHERE (x( location ) BETWEEN '$sw_lat' AND '$ne_lat') AND
 				  (y( location ) BETWEEN '$sw_lon' AND '$ne_lon');";
 	#echo $point_sql;
 	$point_result = $db->mysql_o->query($point_sql);
-	if($point_result->num_rows == 1){
+	if($point_result->num_rows >= 1){
 		while($point = $point_result->fetch_array(MYSQLI_ASSOC)){
 			$response["points"][] = $point;
 		}

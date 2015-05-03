@@ -1,3 +1,7 @@
+.leaflet-bottom, .leaflet-top{
+z-index: 0 !important;
+}
+
 #nav{
 background-color: rgb(255,255,255);
 background-color: rgba(255,255,255,0.8);
@@ -96,6 +100,18 @@ top: 0;
 bottom: 0;
 width: 100%;
 }
+#geolocation_error{
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+align-items: center;
+margin-left: 601px;
+height: 100%;
+justify-content: center;
+text-align: center;
+}
 .leaflet-top {
 top: 80px !important;
 }
@@ -108,17 +124,64 @@ height: 100%;
 #info{
 z-index: 1;
 position: absolute;
-width: 601px;
+width: 40%;
+max-width: 601px;
+min-width: 217px;
+height: 100%;
+padding-top: 60px;
+box-sizing: border-box;
+}
+#info_bg{
 height: 100%;
 background-color: rgba(255, 255, 255, 0.8);
-padding-top: 65px;
-box-sizing: border-box;
 border-left : 1px solid rgba(33, 33, 33, 0.33);
 border-right: 1px solid rgba(33, 33, 33, 0.33);
-}
 
-#info > h3{
+}
+#info_bg > h3{
 font-size: 1em;
 padding: 5px;
 text-align: center;
+}
+#points_result {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 5px 0;
+}
+
+li.point_elem.active{
+background-clip: padding-box;
+z-index: 2;
+}
+li.point_elem{
+border: 1px solid rgba(33, 33, 33, 0.33);
+background-clip: padding-box;
+margin-bottom: -1px;
+position: relative;
+}
+.point_holder {
+padding: 5px;
+display: flex;
+background-color: rgba(255, 255, 255, 0.420);
+}
+.point_avatar {
+width: 50px;
+height: 50px;
+background-color: rgb(33, 33, 33);
+transition: background-color 0.1s;
+border-radius: 5px;
+}
+.point_content {
+flex: 1;
+margin-left: 5px;
+}
+.point_title {
+font-weight: bold;
+color: rgb(92, 92, 92);
+}
+
+#add_point{
+position:absolute;
+bottom: 0;
+padding: 5px;
 }
