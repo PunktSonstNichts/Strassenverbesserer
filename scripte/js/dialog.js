@@ -95,6 +95,15 @@
 					settings.callback(callback);
 				}
 			});
+			$("#inactiv-overlay").click( function(e){
+				$("#dialog").slideUp().removeClass("success").removeClass("error").removeClass("file");
+				$("#inactiv-overlay").fadeOut();
+				$("body").css("overflow", "auto");
+				e.stopPropagation();
+				callback["status"] = "canceled";
+				callback["message"] = "";
+				settings.callback(callback);
+			});
 			$(opt.close).click( function(e){
 				$("#dialog").slideUp().removeClass("success").removeClass("error").removeClass("file");
 				$("#inactiv-overlay").fadeOut();

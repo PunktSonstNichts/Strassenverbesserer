@@ -84,6 +84,25 @@ function init(lat, lon, zoom){
 			});
 		}
 	}, '.point_elem');
+	
+	$(document).on({
+		click: function (){
+			$.getScript('scripte/js/dialog.js', function(){
+				$('div').dialog('show', "addpoint.php", {
+					agree: "#agree",
+					close: "#close",
+					areyousure: "#commit",
+					color: "green",
+					inactivbox: true,
+					callback: function() {
+					  console.log("callback");
+					},
+					ajaxform: true,
+					formname: ".dialog" // if ajaxform = true
+				});
+			});
+		}
+	}, '#add_point');
 		
 	get_points();
 }

@@ -53,8 +53,8 @@ if ( is_session_started() === FALSE ) session_start(); // If main.php is called 
 						
 						</div>
 					</div>
-					<div id="add_point">
-						<button class="btn_success flat"><?php echo _t("add a point to map"); ?></button>
+					<div id="add_point_wrapper">
+						<div id="add_point"><button class="btn_success flat"><?php echo _t("add a point to map"); ?></button></div>
 					</div>
 				</div>
 			</div>

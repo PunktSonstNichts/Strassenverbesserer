@@ -180,8 +180,12 @@ font-weight: bold;
 color: rgb(92, 92, 92);
 }
 
-#add_point{
-position:absolute;
+#add_point_wrapper{
+position: absolute;
 bottom: 0;
 padding: 5px;
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
 }

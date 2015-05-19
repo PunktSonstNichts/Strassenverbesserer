@@ -1,0 +1,14 @@
+#popup_interaction_wrapper{
+display: flex;
+justify-content: space-around;
+margin: 5px;
+}
+
+#popup_interaction_wrapper_divider{
+background-color: rgb(33, 33, 33);
+width: 1px;
+height: auto;
+}
+#login, #register{
+flex: 1;
+}
