@@ -12,7 +12,11 @@ width: 100%;
 z-index: 2;
 }
 #nav_flexbox{
-display: flex;
+display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 height: 65px;
 }
 #logo {
@@ -101,15 +105,20 @@ bottom: 0;
 width: 100%;
 }
 #geolocation_error{
-display: -webkit-box;
-display: -moz-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
-align-items: center;
-margin-left: 601px;
-height: 100%;
+display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+-webkit-justify-content: center;
+-moz-justify-content: center;
+-ms-justify-content: center;
 justify-content: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+margin-left: 50%;
+height: 100%;
 text-align: center;
 }
 .leaflet-top {

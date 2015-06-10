@@ -440,7 +440,7 @@ iframe.noborder{
 border: none;
 }
 /* Buttons */
-.btn, button, input[type=submit] {
+.btn, button, input[type=submit]{
 font-family: "Open Sans", Arial, Helvetica, sans-serif;
 display: inline-block;
 padding: 6px 12px;
@@ -465,7 +465,7 @@ background-image: none !important;
 line-height: 20px;
 transition: all 0.2s
 }
-.btn.flat, button.flat, input[type=submit].flat{
+.flat{
 color: rgb(255, 255, 255) !important;
 background-color: rgb(129, 129, 129);
 }
@@ -502,18 +502,18 @@ border-color: rgb(76, 174, 76);
 background-color: rgb(67, 200, 60);
 }
 
-.btn_success:hover,  input[type=submit]:hover{
+.btn.btn_success:hover, button.btn_success:hover, input[type=submit]:hover{
 color: rgb(54, 165, 48);
 border-color: rgb(57, 132, 57);
 }
-.btn_success.flat:hover, input[type=submit].flat:hover{
+.btn.btn_success.flat:hover, input[type=submit].flat:hover{
 background-color: rgb(57, 132, 57);
 }
 
-.btn_success:active,  input[type=submit]:active{
+.btn.btn_success:active,  input[type=submit]:active{
 border-color: rgb(57, 132, 57);
 }
-.btn_success.flat:active, input[type=submit].flat:active{
+.btn.btn_success.flat:active, input[type=submit].flat:active{
 background-color: rgb(57, 132, 57);
 }
   
@@ -525,18 +525,18 @@ border-color: rgb(220, 30, 30);
 background-color: rgb(229, 72, 54);
 }
 
-.btn_danger:hover {
+.btn.btn_danger:hover, button.btn_danger:hover{
 color: rgb(200, 50, 50);
 border-color: rgb(225, 20, 20);
 }
-.btn_danger.flat:hover {
+.btn.btn_danger.flat:hover, button.btn_danger.flat:hover{
 background-color: rgb(200, 50, 50);
 }
 
-.btn_danger:active{
+.btn.btn_danger:active, button.btn_danger:active{
 border-color: rgb(225, 10, 10);
 }
-.btn_danger.flat:active{
+.btn.btn_danger.flat:active, button.btn_danger.flat:active{
 background-color: rgb(200, 50, 50);
 }
 
@@ -548,18 +548,18 @@ border-color: rgb(255,120,0);
 background-color: rgb(255,147,51);
 }
 
-.btn_warning:hover {
+.btn.btn_warning:hover, button.btn_warning:hover{
 color: rgb(255,124,0);
 border-color: rgb(255,120,0);
 }
-.btn_warning.flat:hover {
+.btn.btn_warning.flat:hover, button.btn_warning.flat:hover{
 background-color: rgb(255,120,0);
 }
 
-.btn_warning:active{
+.btn.btn_warning:active, button.btn_warning:active{
 border-color: rgb(255,124,0);
 }
-.btn_warning.flat:active {
+.btn.btn_warning.flat:active, button.btn_warning.flat:active{
 background-color: rgb(255,124,0);
 }
 
@@ -571,138 +571,37 @@ border-color: rgb(0,143,204);
 background: rgb(0, 176, 242) !important;
 color: rgb(255, 255, 255) !important;
 }
-
-.btn_info:hover {
+.btn.btn_info:hover, button.btn_info:hover{
 color: rgb(0, 156, 222);
 border-color: rgb(0,143,204);
 }
-.btn_info.flat:hover {
+.btn.btn_info.flat:hover, button.btn_info.flat:hover{
 background: rgb(0, 143, 204) !important;
 color: rgb(255, 255, 255) !important;
 }
-
-.btn_info:active{
+.btn.btn_info:active, button.btn_info:active{
 color: rgb(0, 156, 222);
 border-color: rgb(0, 156, 222);
 }
-.btn_info.flat:hover {
+.btn.btn_info.flat:active, button.btn_info.flat:active{
 background: rgb(0, 156, 222) !important;
 color: rgb(245, 245, 245) !important;
 }
 
 
 .btn_close {
-    cursor:pointer;
-    color: #fff;
-    border: 1px solid #AEAEAE;
-    border-radius: 4px;
-    background: #999999;
-    font-size: 10px;
-    font-weight: bold;
-    display: inline-block;
-    line-height: 0px;
-    padding: 8px 4px;   
-    
-}
-
-/** dialog **/
-.dialog_danger {
-font-family: "Open Sans", Arial, Helvetica, sans-serif;
-padding: 6px 12px;
-font-size: 14px;
-font-weight: normal;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-border: 1px solid rgb(129, 129, 129);
+cursor:pointer;
+color: #fff;
+border: 1px solid #AEAEAE;
 border-radius: 4px;
-outline: 0;
-
-background-image: none !important;
-background: rgb(255, 131, 122) !important;
-color: rgb(255, 255, 255);
-border-color: rgb(220, 30, 30);
+background: #999999;
+font-size: 10px;
+font-weight: bold;
+display: inline-block;
+line-height: 0px;
+padding: 8px 4px;   
 }
 
-.dialog_label_danger {
-font-family: "Open Sans", Arial, Helvetica, sans-serif;
-font-size: 14px;
-font-weight: normal;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-
-background-image: none !important;
-background: rgb(255, 131, 122) !important;
-color: rgb(255, 255, 255);
-opacity:0.5;
-}
-
-
-.dialog_success {
-font-family: "Open Sans", Arial, Helvetica, sans-serif;
-padding: 6px 12px;
-font-size: 14px;
-font-weight: normal;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-border: 1px solid rgb(129, 129, 129);
-border-radius: 4px;
-outline: 0;
-
-background-image: none !important;
-background: rgb(129, 193, 131) !important;
-color: rgb(255, 255, 255);
-border-color: rgb(76, 174, 76);
-}
-
-.dialog_label_success {
-font-family: "Open Sans", Arial, Helvetica, sans-serif;
-font-size: 14px;
-font-weight: normal;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-
-background-image: none !important;
-background: rgb(129, 193, 131) !important;
-color: rgb(255, 255, 255);
-opacity:0.5;
-}
-
-.dialog_warning {
-color: rgb(255, 255, 255);
-font-family: "Open Sans", Arial, Helvetica, sans-serif;
-padding: 6px 12px;
-font-size: 14px;
-font-weight: normal;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-border: 1px solid rgb(129, 129, 129);
-border-radius: 4px;
-outline: 0;
-
-background-image: none !important;
-background: rgb(255,157,92) !important;
-color: rgb(255, 255, 255);
-border-color: rgb(255,120,0);
-}
-
-.dialog_label_warning {
-font-family: "Open Sans", Arial, Helvetica, sans-serif;
-font-size: 14px;
-font-weight: normal;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-
-background-image: none !important;
-background: rgb(255,157,92) !important;
-color: rgb(255, 255, 255);
-opacity:0.5;
-}
 /* Boxes */
 .box{
 padding: 10px;

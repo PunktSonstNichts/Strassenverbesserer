@@ -1,9 +1,6 @@
 @media screen and (min-width: 600px){
 	#dialog{
-	width: 600px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	padding: 10px;
+		width: auto;
 	}
 	.label-helper{
 	margin-left: 180px;
@@ -13,9 +10,6 @@
 @media screen and (max-width: 599px){
 	#dialog{
 	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding: 5px;
 	}
 	label{
 	display: none;
@@ -28,9 +22,6 @@
 @media screen and (max-width: 239px){
 	#dialog{
 	width: 200px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding: 5px;
 	}
 }
 
@@ -45,11 +36,12 @@ z-index: 1050;
 z-index: 1050;
 position: relative;
 left: -50%;
-background-color: white;
--webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-border-radius: 2px;
-border: 1px solid rgba(0,0,0,0.2);
+background-color: rgba(255, 255, 255, 0.94);
+-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+border-radius: 6px;
+margin-top: 70px;
+border: 1px solid rgb(219, 219, 219);
 }
 #dialog-heading{
 margin: 5px; 

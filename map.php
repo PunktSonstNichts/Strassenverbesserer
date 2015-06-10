@@ -63,7 +63,7 @@ if ( is_session_started() === FALSE ) session_start(); // If main.php is called 
 	<div id="map">
 		<div class="wrapper" style="height: 100%">
 			<div id="geolocation_error">
-				<span><?php echo _t("You have to either accept or deny geolocation in order to view map here "); ?></span>
+				<span><?php echo _t("Seems like something gone wrong on loading the map. I am sorry :/"); ?></span>
 			</div>
 		</div>
 	</div>

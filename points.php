@@ -32,5 +32,23 @@ if(!$ne_lat || !$ne_lon || !$sw_lat || !$sw_lon){
 		}
 	}
 }
-echo json_encode(utf8ize($response));
+
+$json = json_encode(utf8ize($response), JSON_PRETTY_PRINT);
+
+if(array_key_exists('callback', $_GET)){
+
+    header('Content-Type: text/javascript; charset=utf8');
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Max-Age: 3628800');
+    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+
+    $callback = $_GET['callback'];
+    echo $callback.'('.$json.');';
+
+}else{
+    // normal JSON string
+    header('Content-Type: application/json; charset=utf8');
+
+    echo $json;
+}
 ?>

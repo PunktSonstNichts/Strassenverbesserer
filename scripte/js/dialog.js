@@ -7,15 +7,6 @@
 
 	if(window.initialized != true){
 		$('<div id="dialog-helper"><div id="dialog" style="display: none"><div id="close">&times;</div><div id="dialog-content"></div></div></div><div id="inactiv-overlay" style="display: none"></div>').prependTo("body");
-		$("#close").click( function(e){
-			$("#dialog").slideUp(700, function() {
-				$("#dialog").removeClass("success").removeClass("error").removeClass("file");
-			});
-			$("#inactiv-overlay").fadeOut();
-			$("body").css("overflow", "auto");
-			e.stopPropagation();
-		});
-		
 		window.initialized = true;
 	}
     },
@@ -85,8 +76,8 @@
 			}
 			
 			$(opt.agree).click( function(e){
-				$("#dialog").slideUp().removeClass("success").removeClass("error").removeClass("file");
-				$("#inactiv-overlay").fadeOut();
+				$("#inactiv-overlay").delay(10).fadeOut(700);
+				$("#dialog").delay(410).slideUp(700).removeClass("success").removeClass("error").removeClass("file");
 				$("body").css("overflow", "auto");
 				e.stopPropagation();
 				if(ajaxform == false){
@@ -95,18 +86,20 @@
 					settings.callback(callback);
 				}
 			});
-			$("#inactiv-overlay").click( function(e){
-				$("#dialog").slideUp().removeClass("success").removeClass("error").removeClass("file");
-				$("#inactiv-overlay").fadeOut();
-				$("body").css("overflow", "auto");
+			$("#inactiv-overlay", "#dialog-helper").click( function(e){
 				e.stopPropagation();
-				callback["status"] = "canceled";
-				callback["message"] = "";
-				settings.callback(callback);
+				if($(e.target).is('#dialog-helper') || $(e.target).is('#inactiv-overlay')){
+					$("#inactiv-overlay").delay(10).fadeOut(700);
+					$("#dialog").delay(410).slideUp(700).removeClass("success").removeClass("error").removeClass("file");
+					$("body").css("overflow", "auto");
+					callback["status"] = "canceled";
+					callback["message"] = "";
+					settings.callback(callback);
+				}
 			});
 			$(opt.close).click( function(e){
-				$("#dialog").slideUp().removeClass("success").removeClass("error").removeClass("file");
-				$("#inactiv-overlay").fadeOut();
+				$("#inactiv-overlay").delay(10).fadeOut(700);
+				$("#dialog").delay(410).slideUp(700).removeClass("success").removeClass("error").removeClass("file");
 				$("body").css("overflow", "auto");
 				e.stopPropagation();
 				callback["status"] = "Denied";

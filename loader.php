@@ -1,7 +1,7 @@
 <?php
 // loader to load all important files
 
-define('SERVER_URL', "http://localhost/Strassenverbesserer/"); define('SERVER_DIR', "C:/Users/PunktSpnstNichts/Desktop/xampp/htdocs/Strassenverbesserer/");
+define('SERVER_URL', "http://".$_SERVER['SERVER_NAME']."/Strassenverbesserer/"); define('SERVER_DIR', "C:/Users/PunktSpnstNichts/Desktop/xampp/htdocs/Strassenverbesserer/");
 
 
 define('DEVELOPMODE', false);

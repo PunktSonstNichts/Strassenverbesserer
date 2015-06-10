@@ -1,14 +1,48 @@
-#popup_interaction_wrapper{
+#popupbox_heading{
+border-radius: 5px 5px 0 0;
+padding: 5px;
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
+width: 100%;
+box-sizing: border-box;
+}
+#popupbox_heading > span {
+  line-height: 24px;
+  display: inline-block;
+}
+#heading_span {
+  flex: 1;
+  text-align: center;
+}
+#popupbox_close {
+  width: 10px;
+}
+#popup_interaction_wrapper, #submit_area{
 margin: 5px;
+text-align: center;
 }
 
-#popup_interaction_wrapper_divider{
-background-color: rgb(33, 33, 33);
-width: 1px;
-height: auto;
+#login, #register, #login_submit, #register_submit{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
-#login, #register{
-flex: 1;
+
+#login > input, .input_wrapper > input{
+margin: 5px;
+max-width: 220px;
+box-sizing: border-box;
 }
+.input_holder{
+width: 100%;
+}
+.input_holder > input {
+margin: 5px;
+box-sizing: border-box;
+}
+.input_holder > label{
+display: inline-block;
+line-height: 44px;
+min-width: 200px;
+ }

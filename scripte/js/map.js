@@ -13,7 +13,9 @@ var map;
 var points;
 L.mapbox.accessToken = 'pk.eyJ1IjoicHVua3Rzb25zdG5pY2h0cyIsImEiOiJGWWVEQUl3In0.P-wDrt1oIjtCCw265FjGFQ';
 
-if (navigator.geolocation) {
+init();
+
+if(navigator.geolocation) {
 	var options = {
 	  enableHighAccuracy: true,
 	  timeout: 5000,
@@ -21,31 +23,28 @@ if (navigator.geolocation) {
 	};
 
 	function success(position) {
-		zoom = 15;
 		lat = position.coords.latitude;
 		lon = position.coords.longitude;
-		init(lat, lon, zoom);
+		map.setView([lat, lon], 14);
 	};
 
 	function error(err) {
 		console.warn('ERROR(' + err.code + '): ' + err.message);
-		init(52.374027, 9.739208, 13);
 	};
 
 	navigator.geolocation.getCurrentPosition(success, error, options);
 }else{
 	console.log("Geolocation is not supported by this browser.");
-	init(52.374027, 9.739208, 13);
 }
 
 
-function init(lat, lon, zoom){
+function init(){
 	// Create a map in the div #map
-	map = L.mapbox.map('map', 'punktsonstnichts.i3k0ibhn', { zoomControl : true}).setView([lat, lon], zoom);
+	map = L.mapbox.map('map', 'punktsonstnichts.i3k0ibhn', { zoomControl : true}).setView([52.374027, 9.739208], 13);
 	var points_layer = L.mapbox.featureLayer().addTo(map);
 	map.addControl(L.mapbox.infoControl()).addControl(L.mapbox.geocoderControl('punktsonstnichts.i3k0ibhn')).addControl(L.mapbox.legendControl());;
 
-	points = L.layerGroup().addTo(points_layer);
+	points = L.featureGroup().addTo(points_layer);
 	map.on('move', function(){
 		console.log("move");
 		delay(function(){
@@ -84,6 +83,13 @@ function init(lat, lon, zoom){
 			});
 		}
 	}, '.point_elem');
+	
+	
+	console.log(points);
+	points.on('click', function(e) {
+		alert("click");
+		console.log(e);
+	});
 	
 	$(document).on({
 		click: function (){
